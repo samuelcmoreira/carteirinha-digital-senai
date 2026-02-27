@@ -7,12 +7,15 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -44,67 +47,97 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-//diz que a função vai construir algo na tela (retirando o erro de "Column")
 @Composable
-fun CarteirinhaDeEstudante(modifier: Modifier = Modifier){ //nome: tipo, padrao
+fun CarteirinhaDeEstudante(modifier: Modifier = Modifier){
     Surface(
         modifier = modifier
-            .fillMaxSize()
-            .padding(),
+            .fillMaxSize(),
         color = MaterialTheme.colorScheme.background
     ) {
-        Column (
-            modifier = Modifier.padding(24.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ){
+        Box() {
             Image(
-                painter = painterResource(R.drawable.senai_logo_1),
-                contentDescription = "logo_senai",
-                modifier = Modifier.size(200.dp),
-                contentScale = ContentScale.Fit
-            )
-            Image(
-                painter = painterResource(R.drawable.foto_perfil),
-                contentDescription = "foto_perfil",
+                painterResource(R.drawable.barata),
+                contentDescription = "background",
                 contentScale = ContentScale.Crop,
+                modifier = Modifier.fillMaxSize()
+            )
+            Column(
                 modifier = Modifier
-                    .size(150.dp)
-                    .clip(CircleShape)
-                    .border(2.dp, MaterialTheme.colorScheme.primary, CircleShape)
-            )
-            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                Row {
-                    Text(
-                        text = "Nome: ",
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.primary
-                    )
-                    Text(
-                        text = "Samuel",
-                        modifier = Modifier.padding(start = 8.dp),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.primary
-                    )
+                    .fillMaxSize()
+                    .padding(16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Image(
+                    painter = painterResource(R.drawable.senai_logo_1),
+                    contentDescription = "logo_senai",
+                    modifier = Modifier
+                        .width(200.dp)
+                        .weight(1f),
+                    contentScale = ContentScale.Fit
+                )
+                Image(
+                    painter = painterResource(R.drawable.foto_perfil),
+                    contentDescription = "foto_perfil",
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+//                        .size(150.dp)
+                        .aspectRatio(1f)
+                        .clip(CircleShape)
+                        .border(2.dp, MaterialTheme.colorScheme.primary, CircleShape)
+                        .weight(1.5f)
+                )
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center
+                ) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .weight(0.2f),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = "Nome: ",
+                            modifier = Modifier.weight(1f),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                        Text(
+                            text = "Samuel",
+                            modifier = Modifier.weight(2f),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                    }
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .weight(0.2f),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = "Curso: ",
+                            modifier = Modifier.weight(1f),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                        Text(
+                            text = "Desenvolvimento de Sistemas",
+                            modifier = Modifier.weight(2f),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                    }
                 }
-                Row {
-                    Text(
-                        text = "Curso: ",
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.primary
-                    )
-                    Text(
-                        text = "Desenvolvimento de Sistemas",
-                        modifier = Modifier.padding(start = 8.dp),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.primary
-                    )
-                }
-            }
 
-            QrCode(
-                conteudo = "vem pro x1 pedrinho"
-            )
+                QrCode(
+                    conteudo = "vem pro x1 pedrinho",
+                    modifier = Modifier.weight(1f)
+                )
+            }
         }
     }
 }
