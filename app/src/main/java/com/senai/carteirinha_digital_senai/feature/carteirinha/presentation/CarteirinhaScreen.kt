@@ -1,4 +1,4 @@
-package com.senai.carteirinha_digital_senai
+package com.senai.carteirinha_digital_senai.feature.carteirinha.presentation
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -24,9 +24,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.rafaelcosta.myapplication.QrCode
+import com.senai.carteirinha_digital_senai.R
+import com.senai.carteirinha_digital_senai.feature.carteirinha.presentation.component.LabelText
+import com.senai.carteirinha_digital_senai.feature.carteirinha.presentation.component.ValueText
 
 @Composable
-fun CarteirinhaView(modifier: Modifier = Modifier){
+fun CarteirinhaScreen(modifier: Modifier = Modifier){
     Surface(
         modifier = modifier
             .fillMaxSize(),
