@@ -1,4 +1,4 @@
-package com.senai.carteirinha_digital_senai.feature.carteirinha.presentation
+package com.senai.carteirinha_digital_senai.feature.carteirinha.presentation.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.sp
 import com.rafaelcosta.myapplication.QrCode
 import com.senai.carteirinha_digital_senai.R
 import com.senai.carteirinha_digital_senai.feature.carteirinha.presentation.component.LabelText
+import com.senai.carteirinha_digital_senai.feature.carteirinha.presentation.component.LogoSenai
 import com.senai.carteirinha_digital_senai.feature.carteirinha.presentation.component.ValueText
 
 @Composable
@@ -61,7 +62,6 @@ fun CarteirinhaScreen(modifier: Modifier = Modifier){
                     contentDescription = "foto_perfil",
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
-//                        .size(150.dp)
                         .aspectRatio(1f)
                         .clip(CircleShape)
                         .border(2.dp, MaterialTheme.colorScheme.primary, CircleShape)
