@@ -1,4 +1,4 @@
-package com.example.ui.theme
+package com.senai.carteirinha_digital_senai.core.designsystem.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.font.FontFamily

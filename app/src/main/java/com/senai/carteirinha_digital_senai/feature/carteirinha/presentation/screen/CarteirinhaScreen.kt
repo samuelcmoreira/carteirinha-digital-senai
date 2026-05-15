@@ -23,10 +23,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.rafaelcosta.myapplication.QrCode
+import com.senai.carteirinha_digital_senai.feature.carteirinha.presentation.component.QrCode
 import com.senai.carteirinha_digital_senai.R
 import com.senai.carteirinha_digital_senai.feature.carteirinha.presentation.component.LabelText
-import com.senai.carteirinha_digital_senai.feature.carteirinha.presentation.component.LogoSenai
 import com.senai.carteirinha_digital_senai.feature.carteirinha.presentation.component.ValueText
 
 @Composable

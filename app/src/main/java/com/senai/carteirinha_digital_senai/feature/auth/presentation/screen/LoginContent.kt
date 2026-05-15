@@ -17,7 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.compose.CarteirinhaDigitalSenaiTheme
+import com.senai.carteirinha_digital_senai.core.designsystem.theme.CarteirinhaDigitalSenaiTheme
 
 @Composable
 fun LoginContent(
