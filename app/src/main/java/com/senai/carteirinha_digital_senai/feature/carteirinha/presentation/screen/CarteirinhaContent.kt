@@ -1,6 +1,5 @@
 package com.senai.carteirinha_digital_senai.feature.carteirinha.presentation.screen
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -10,13 +9,9 @@ import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.senai.carteirinha_digital_senai.core.designsystem.theme.CarteirinhaDigitalSenaiTheme
 import com.senai.carteirinha_digital_senai.feature.carteirinha.presentation.component.QrCode
-import com.senai.carteirinha_digital_senai.R
 import com.senai.carteirinha_digital_senai.feature.carteirinha.presentation.component.BackgroundCarteirinha
 import com.senai.carteirinha_digital_senai.feature.carteirinha.presentation.component.LogoSenai
 import com.senai.carteirinha_digital_senai.feature.carteirinha.presentation.component.PerfilAluno
