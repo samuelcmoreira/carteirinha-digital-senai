@@ -28,14 +28,25 @@ fun AppNavHost(
                navController = navController
            )
        }
-        composable(Routes.Carteirinha.route) {
-            CarteirinhaScreen(
-                modifier = Modifier
-                    .fillMaxSize()
+
+        composable(route = Routes.Home.route) {
+            HomeScreen(
+                onCarteirinhaClick = {
+                    navController.navigate(Routes.Carteirinha.route)
+                },
+                onUnidadesCurricularesClick = {
+                    navController.navigate(Routes.UnidadesCurriculares.route)
+                },
+                onLogoutClick = {
+                    navController.navigate(Routes.Login.route) {
+                        popUpTo(Routes.Home.route) { inclusive = true }
+                    }
+                }
             )
         }
-        composable(Routes.Home.route) {
-            HomeScreen(
+
+        composable(Routes.Carteirinha.route) {
+            CarteirinhaScreen(
                 modifier = Modifier
                     .fillMaxSize()
             )
